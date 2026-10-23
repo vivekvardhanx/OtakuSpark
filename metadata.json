@@ -1,0 +1,7 @@
+{
+  "name": "OtakuSpark",
+  "description": "Cinematic anime character discovery platform featuring iconic anime characters, unforgettable quotes, and legendary scenes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
