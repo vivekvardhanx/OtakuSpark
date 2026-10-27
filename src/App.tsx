@@ -5,7 +5,6 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { DynamicCharacterCarousel } from './components/DynamicCharacterCarousel';
 import { IconicMomentsStrip } from './components/IconicMomentsStrip';
-import { ExploreThemes } from './components/ExploreThemes';
 import { AllCharactersSection } from './components/AllCharactersSection';
 import { CharacterDetailModal } from './components/CharacterDetailModal';
 import { SurpriseRevealModal } from './components/SurpriseRevealModal';
@@ -144,11 +143,6 @@ export default function App() {
     }, 400);
   };
 
-  const handleThemeSelectFromGrid = (theme: MotivationalTheme) => {
-    setSelectedTheme(theme);
-    handleScrollToSection('all-characters-section');
-  };
-
   const handleClearFilters = () => {
     setSearchQuery('');
     setSelectedAnime('ALL');
@@ -202,13 +196,7 @@ export default function App() {
           onSelectCharacter={setSelectedCharacter}
         />
 
-        {/* 5. Section C: Explore by Theme (Compact "FIND YOUR EDGE" Selector) */}
-        <ExploreThemes
-          onSelectTheme={handleThemeSelectFromGrid}
-          selectedTheme={selectedTheme}
-        />
-
-        {/* 6. Section D: Explore All Characters (Full Collection with Search & Filters) */}
+        {/* 5. Explore All Characters (Full Collection with Search & Filters) */}
         <AllCharactersSection
           characters={filteredCharacters}
           searchQuery={searchQuery}
